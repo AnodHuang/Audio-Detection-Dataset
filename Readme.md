@@ -2,7 +2,8 @@
 ### Basic Information
 - **File Type**: flac
 - **Sampling Rate**: 16000
-- **Key**: 
+- **Key**:
+  
 | value | label |
 | ------- | ------- |
 |   0      |    bonafide     |
