@@ -2,8 +2,8 @@
 ### Basic Information
 - **File Type**: flac
 - **Sampling Rate**: 16000
-- **Key**:
-  
+- **Key**: 
+
 | value | label |
 | ------- | ------- |
 |   0      |    bonafide     |
@@ -41,14 +41,25 @@ Audio_<Sentence Index>_<Speaker Id>_<Audio Type>_<Sub Type>_<Combine Pattern>.fl
 |    3     |     Combined     |     Combined Audio|
 
 #### Sub Type
-*This index is exclusively applicable to combined audio (where the Audio Type is equal to 3). For all other audio types, the value of this index shall be set to 0.*
+*This index is exclusively applicable to combined audio (where the Audio Type is equal to 3) and AI generate audio(Audio Type = 1). For all other audio types, the value of this index shall be set to 0.*
 
 | Index |  Tag |Description |
 | ------- | ------- |------- |
-|    0     |     None     |  Not Combined Audio   |
-|    1     |     CH/HC     |     Combined Audio(AI Cloned + Human)|
-|    2     |     AH/HA     |     Combined Audio(AI Generated + Human)|
-|    3     |     CA/AC     |     Combined Audio(AI Cloned + AI Generated)|
+|    0     |     None     |  Not Specific Audio   |
+|    1     |     C_0     |     AI Cloned Audio(Source = First Sentence)|
+|    2     |     C_1     |     AI Cloned Audio(Source = New Concept English Part)|
+|    3     |     C_2     |     AI Cloned Audio(Source = Full part)|
+|    4     |     C_3     |     AI Cloned Audio(Source = Current Sentence)|
+|    5     |     CH/HC     |     Combined Audio(AI Cloned(C_0) + Human)|
+|    6     |     CH/HC     |     Combined Audio(AI Cloned(C_1) + Human)|
+|    7     |     CH/HC     |     Combined Audio(AI Cloned(C_2) + Human)|
+|    8     |     CH/HC     |     Combined Audio(AI Cloned(C_3) + Human)|
+|    9     |     CA/AC     |     Combined Audio(AI Cloned(C_0) + AI Generated)|
+|    10     |     CA/AC     |     Combined Audio(AI Cloned(C_1) + AI Generated)|
+|    11     |     CA/AC     |     Combined Audio(AI Cloned(C_2) + AI Generated)|
+|    12     |     CA/AC     |     Combined Audio(AI Cloned(C_3) + AI Generated)|
+|    13     |     AH/HA     |     Combined Audio(AI Generated + Human)|
+
 
 #### Combine Pattern
 | Index |  Combined Source Type |Pattern |
